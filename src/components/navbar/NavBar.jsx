@@ -28,9 +28,9 @@ const NavBar =()=>{
   </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal px-1">
-      <NavLink to='/'><li className="font-bold"><a>Home</a></li></NavLink>
-      <NavLink to='/blog'><li className="font-bold"><a>Blog</a></li></NavLink>
-      <NavLink to='/bookmark'><li className="font-bold"><a>Bookmark</a></li></NavLink>
+      <NavLink to='/' className={({ isActive }) => isActive?' text-primary underline':'' }><li className="font-bold text-xl"><a>Home</a></li></NavLink>
+      <NavLink to='/blog' className={({ isActive }) => isActive?' text-primary underline':'' }><li className="font-bold text-xl"><a>Blog</a></li></NavLink>
+      <NavLink to='/bookmark' className={({ isActive }) => isActive?' text-primary underline':'' }><li className="font-bold text-xl"><a>Bookmark</a></li></NavLink>
     </ul>
     <label className="cursor-pointer grid place-items-center">
   <input onChange={handleToggle} type="checkbox"  className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"/>
