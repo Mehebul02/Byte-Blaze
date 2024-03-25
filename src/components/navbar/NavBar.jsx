@@ -22,14 +22,14 @@ const NavBar =()=>{
  console.log(theme)
     return(
         <div>
-           <div className="navbar bg-base-100 shadow-lg px-6">
+           <div className="navbar bg-base-100 shadow-lg px-6 fixed z-10">
   <div className="flex-1">
     <a className="btn btn-ghost gap-0 normal-case  text-secondary text-2xl">Byte<span className="text-primary font-bold">Blaze</span></a>
   </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal px-1">
-      <NavLink to='/' className={({ isActive }) => isActive?' text-primary underline':'' }><li className="font-bold text-xl"><a>Home</a></li></NavLink>
-      <NavLink to='/blog' className={({ isActive }) => isActive?' text-primary underline':'' }><li className="font-bold text-xl"><a>Blog</a></li></NavLink>
+      <NavLink to='/' className={({ isActive }) => isActive?' text-primary  underline':'' }><li className="font-bold text-xl"><a>Home</a></li></NavLink>
+      <NavLink to='/blogs' className={({ isActive }) => isActive?' text-primary underline':'' }><li className="font-bold text-xl"><a>Blogs</a></li></NavLink>
       <NavLink to='/bookmark' className={({ isActive }) => isActive?' text-primary underline':'' }><li className="font-bold text-xl"><a>Bookmark</a></li></NavLink>
     </ul>
     <label className="cursor-pointer grid place-items-center">

@@ -11,8 +11,10 @@ import {
 
 import Root from './components/Layout/root/Root.jsx';
 import Home from './components/home/Home.jsx';
-import Blog from './components/Blog/Blog.jsx';
+import Blog from './components/Blogs/Blogs.jsx';
 import BookMark from './components/Bookmark/BookMark.jsx';
+import Blogs from './components/Blogs/Blogs.jsx';
+import BlogDetails from './components/Blogs/blogdetails/BlogDetails.jsx';
 const router = createBrowserRouter([
 {
   path:'/',
@@ -23,8 +25,16 @@ const router = createBrowserRouter([
       element:<Home></Home>
     },
     {
-      path:'/blog',
-      element:<Blog></Blog>
+      path:'/blogs',
+      element:<Blogs></Blogs>,
+      loader:()=>fetch('https://dev.to/api/articles?per_page=20&top=7')
+      
+    },
+    {
+      path:'/blogDetails/:id',
+      element:<BlogDetails></BlogDetails>,
+      loader:({params})=>fetch(`https://dev.to/api/articles/${params.id}`),
+
     },
     {
       path:'/bookmark',

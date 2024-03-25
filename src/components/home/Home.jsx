@@ -1,8 +1,11 @@
-
+import Hero from "../Hero/Hero"
 const Home =()=>{
     return (
-        <div>
-          <h1>This home section</h1>
+        <div >
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)]">
+      <Hero></Hero>
+      </div>
+     
         </div>
     )
 }
